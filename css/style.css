@@ -1,0 +1,57 @@
+img {
+    border: 3px solid red;
+    display: block;
+    margin-bottom: 200px;
+}
+
+#t1 {
+    transform: rotate(-20deg);
+    transition: all .3s;
+}
+
+#t1:hover {
+    transform: rotate(20deg);
+}
+
+#t2 {
+    /*transform: translateX(200px);
+    transform: translateY(200px);
+    żeby prrzesunąć element po obu osiach, należ użyć zapisu skróconego */
+    transform: translate(200px, 200px) rotate(20deg);
+}
+
+#t3 {
+    /*transform: scaleX(2);
+    transform: scaleY(2); to samo, co w translate */
+    transform: scale(.2);
+}
+
+#t4 {
+    animation-name: stretch;
+    animation-duration: 4s;
+    width: 100%;
+}
+#t5{
+    animation-name: second_stretch;
+    animation-duration: 3s;
+    width: 50%;
+    /*animation-iteration-count: 2;*/
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes stretch {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes second_stretch{
+    0%, 100%{
+        width: 50%;
+    }
+    50%{
+        width: 100%;
+    }
+}
